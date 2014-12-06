@@ -192,7 +192,7 @@ class Weather
     private function getWeather($query, $days = 1, $units = 'internal', $type = 0, $lang = 'en')
     {
         $forecast = ($type == 0) ? 'forecast/daily?' : 'weather?';
-        return str_replace('&lt;small&gt;', '', str_replace('&lt;/small&gt;', '', $this->request("http://api.openweathermap.org/data/2.5/{$forecast}{$query}&cnt={$days}&units={$units}&mode=json&lang={$lang}")));
+        return $this->request("http://api.openweathermap.org/data/2.5/{$forecast}{$query}&cnt={$days}&units={$units}&mode=json&lang={$lang}");
     }
 
     private function request($url)
