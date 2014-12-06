@@ -63,10 +63,11 @@ class Weather
      * @param  float  $lon
      * @return string
      */
-    public function renderByPoint($lat, $lon)
+    public function renderByPoint($lat, $lon, $units = 'metric')
     {
         return $this->generate(array(
-            'query' => "lat={$lat}&lon={$lon}"
+            'query' => "lat={$lat}&lon={$lon}",
+            'units' => $units
         ));
     }
 
