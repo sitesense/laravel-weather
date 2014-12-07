@@ -6,7 +6,7 @@
 		<span class="details">
 			{{ Lang::get("weather.humidity") }}: <em class="pull-right">{{ ceil( $current['main']['humidity'] ) }}%</em><br>
 			{{ Lang::get("weather.clouds") }}: <em class="pull-right">{{ ceil($current['clouds']['all']) }}%</em><br>
-			{{ Lang::get("weather.wind") }}: ({{ Weather::getWindDirection($current['wind']['deg']) }}): <em class="pull-right">{{ ceil($current['wind']['speed'] * 3.6).'kph' / ceil($current['wind']['speed'] * 3.6 / 1.609344).'mph' }}</em><br>
+			{{ Lang::get("weather.wind") }}: ({{ Weather::getWindDirection($current['wind']['deg']) }}): <em class="pull-right">{{ ceil($current['wind']['speed'] * 3.6).'kph'. ' / '. ceil($current['wind']['speed'] * 3.6 / 1.609344).'mph' }}</em><br>
 		</span>
 	</div>
 
