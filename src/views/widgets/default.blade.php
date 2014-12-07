@@ -1,5 +1,5 @@
 <div class="weather-widget">
-	<h4>{{ $this->fishery->name or $current['name'] }}</h4>
+	<h4>{{ 'Local Weather' or $current['name'] }}</h4>
 
 	<div class="temp">
 		<span class="degrees">{{ ceil($current['main']['temp']) }}&deg; {{ $units == 'metric' ? 'C' : 'F' }}</span>
