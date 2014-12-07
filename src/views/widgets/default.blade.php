@@ -4,9 +4,9 @@
 	<div class="temp">
 		<span class="degrees">{{ ceil($current['main']['temp']) }}&deg;</span>
 		<span class="details">
-			{{ Lang::get("weather/humidity") }}: <em class="pull-right">{{ ceil( $current['main']['humidity'] ) }}%</em><br>
-			{{ Lang::get("weather/clouds") }}: <em class="pull-right">{{ ceil($current['clouds']['all']) }}%</em><br>
-			{{ Lang::get("weather/wind") }}: ({{ Weather::getWindDirection($current['wind']['deg']) }}): <em class="pull-right">{{ $units == 'metric' ? ceil($current['wind']['speed'] * 3.6).'<small>kph</small>' : ceil($current['wind']['speed'] * 3.6 / 1.609344).'<small>mph</small>' }}</em><br>
+			{{ Lang::get("weather.humidity") }}: <em class="pull-right">{{ ceil( $current['main']['humidity'] ) }}%</em><br>
+			{{ Lang::get("weather.clouds") }}: <em class="pull-right">{{ ceil($current['clouds']['all']) }}%</em><br>
+			{{ Lang::get("weather.wind") }}: ({{ Weather::getWindDirection($current['wind']['deg']) }}): <em class="pull-right">{{ $units == 'metric' ? ceil($current['wind']['speed'] * 3.6).'<small>kph</small>' : ceil($current['wind']['speed'] * 3.6 / 1.609344).'<small>mph</small>' }}</em><br>
 		</span>
 	</div>
 
