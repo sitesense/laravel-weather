@@ -4,9 +4,9 @@
 	<div class="temp">
 		<span class="degrees">{{ ceil($current['main']['temp']) }}&deg;</span>
 		<span class="details">
-			{{ <em class="pull-right">{{ ceil( $current['main']['humidity'] ) }}%</em><br>
-			{{ <em class="pull-right">{{ ceil($current['clouds']['all']) }}%</em><br>
-			{{ ({{ Weather::getWindDirection($current['wind']['deg']) }}): <em class="pull-right">{{ ceil($current['wind']['speed'] * 3.6 / 1.609344).'mph' }}</em><br>
+			{{ Humidity: <em class="pull-right">{{ ceil( $current['main']['humidity'] ) }}%</em><br>
+			{{ Clouds: <em class="pull-right">{{ ceil($current['clouds']['all']) }}%</em><br>
+			{{ Wind: ({{ Weather::getWindDirection($current['wind']['deg']) }}): <em class="pull-right">{{ ceil($current['wind']['speed'] * 3.6 / 1.609344).'mph' }}</em><br>
 		</span>
 	</div>
 
