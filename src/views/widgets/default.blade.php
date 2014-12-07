@@ -2,7 +2,7 @@
 	<h4>{{ $current['name'] }}</h4>
 
 	<div class="temp">
-		<span class="degrees">{{ ceil($current['main']['temp']) }}&deg;</span>
+		<span class="degrees">{{ ceil($current['main']['temp']) }}&deg; $units == 'metric' ? 'C' : 'F'</span>
 		<span class="details">
 			{{ Lang::get("weather.humidity") }}: <em class="pull-right">{{ ceil( $current['main']['humidity'] ) }}%</em><br>
 			{{ Lang::get("weather.clouds") }}: <em class="pull-right">{{ ceil($current['clouds']['all']) }}%</em><br>
